@@ -19,4 +19,7 @@ This is more detailed page which shows the posts in the page in GridView. Each p
 ### To do plans
 
 1. Use `get_connect` instead of dio
-1. Use `GetService`
+  1. Autherization token passing API using interceptor
+  2. Refresh token
+2. Use `GetService`
+  1. Maintain constent check of network connectivity using service and notify user. 
