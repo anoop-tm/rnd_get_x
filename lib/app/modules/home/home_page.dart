@@ -31,6 +31,14 @@ class HomePage extends GetView<HomeController> {
                 isLoading: controller.isLoadingPosts.value,
                 route: Routes.POST,
               ),
+              SizedBox(
+                height: 30,
+              ),
+              _InfoCard(
+                  title: 'Saved Posts',
+                  info: _.savedPosts.length.toString(),
+                  isLoading: false,
+                  route: Routes.POST)
             ],
           );
         }),

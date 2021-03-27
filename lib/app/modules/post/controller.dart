@@ -7,6 +7,7 @@ class PostController extends GetxController {
   final PostRepository repository;
 
   final posts = <Post>[].obs;
+  final savedPosts = <Post>[].obs;
   final isLoadingPosts = false.obs;
 
   PostController({@required this.repository}) : assert(repository != null);
@@ -27,5 +28,9 @@ class PostController extends GetxController {
     } finally {
       this.isLoadingPosts(false);
     }
+  }
+
+  savePost(Post post) {
+    var x = repository.savePost(post);
   }
 }

@@ -16,13 +16,22 @@ class HomeController extends GetxController {
 
   final albums = <Album>[].obs;
   final posts = <Post>[].obs;
+  final savedPosts = <Post>[].obs;
   final isLoadingPosts = false.obs;
 
   @override
   void onInit() {
+    printInfo(info: 'onInit()');
     _getAlbums();
     _getPosts();
+    _getSavedPosts();
     super.onInit();
+  }
+
+  @override
+  void onReady() {
+    printInfo(info: 'Onready');
+    super.onReady();
   }
 
   void _getAlbums() async {
@@ -42,5 +51,10 @@ class HomeController extends GetxController {
     } finally {
       this.isLoadingPosts(false);
     }
+  }
+
+  void _getSavedPosts() async {
+    var posts = await postRepository.getPosts();
+    printInfo(info: 'Got posts ${posts.length}');
   }
 }
