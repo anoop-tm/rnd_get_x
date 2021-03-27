@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'package:dio/dio.dart';
 import 'package:get/get.dart';
 import 'package:meta/meta.dart';
@@ -26,8 +25,3 @@ class AlbumApiClient {
     }
   }
 }
-// 
-//    final response =
-//           await Api.dio.post('/dashboard/GetEvents', queryParameters: params);
-//       var events =
-//           (response.data as List).map((e) => Event.fromJson(e)).toList();
