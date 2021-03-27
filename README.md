@@ -1,16 +1,22 @@
-# rnd_get_x
+#R&D GetX
 
-A new Flutter project.
+This is a sample application to learn flutter with getx patterns and it's other features. I feel a strong love the ideas in https://github.com/kauemurakami/getx_pattern. Together with the snippets in VSCode this pattern can help create good structured projects.
 
-## Getting Started
+### Contents
 
-This project is a starting point for a Flutter application.
+###### Home page
 
-A few resources to get you started if this is your first Flutter project:
+This just contains a card showing the count of posts and abums in the app. `HomePage` doesnot have a repository of it's own. It initializes the controllers for `Albums` and `Posts` for the required data.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+###### Albums page
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+This is a simple page with the list of albums displayed using the `ListViewBuilder`.
+
+###### Posts page
+
+This is more detailed page which shows the posts in the page in GridView. Each post opens up to show detailed post along with its comments. This is currently work in progress.
+
+### To do plans
+
+1. Use `get_connect` instead of dio
+1. Use `GetService`
